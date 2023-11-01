@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!-- Assist-Control CSS -->
-  <link rel="stylesheet" href="../CSS/Style.css">
+  <link rel="stylesheet" href="../CSS/Styles.css">
 
 </head>
 <body>
@@ -36,7 +36,7 @@
             <input type="password" class="form-control" autocomplete="current-password" name="inputPassword"  placeholder="Contraseña" required>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn mt-4 mb-3 text-white stBtn">Iniciar Sesión</button>
+            <button type="submit" class="btn mt-4 mb-3 text-white stBtn">INICIAR SESIÓN</button>
           </div>
         </form>
         </div>
