@@ -27,7 +27,7 @@
     <!-- Formulario de registro -->
     <div class="row justify-content-center align-items-center text-center g-2">
       <div class="col-12 col-md-10 col-xl-8 col-xxl-6 mt-4 position-absolute top-50 start-50 translate-middle">
-        <div class="text-white stForm">
+        <div class="text-dark stForm">
           <p class="h2 text-center pt-3 pb-3">Estudiantes DAW Grupo 1</p>
           <form action="" method="post">
             <!-- Assist Radio Button -->
@@ -43,12 +43,12 @@
               </div>
               <div class="form-check form-check-inline">
                 <input class="btn-check" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                <label class="btn btn-outline-secondary border border-3 border-secondary btnAssist" for="inlineRadio3">Tarde</label>
+                <label class="btn btn-outline-secondary border border-3 border-secondary btnAssist" for="inlineRadio3">Retardo</label>
               </div>
             </div>
             
             <div class="text-center">
-                <button type="submit" class="btn mt-4 mb-3 text-white stBtn">Enviar</button>
+                <button type="submit" class="btn mt-4 mb-3 text-black stBtn">Enviar</button>
               </div>
           </form>
         </div>

@@ -36,7 +36,7 @@
             <input type="password" class="form-control" autocomplete="current-password" name="inputPassword"  placeholder="Contraseña" required>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn mt-4 mb-3 text-white stBtn">INICIAR SESIÓN</button>
+            <button type="submit" class="btn mt-4 mb-3 text-black stBtn">INICIAR SESIÓN</button>
           </div>
         </form>
         </div>
