@@ -11,7 +11,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!-- Assist-Control CSS -->
-  <link rel="stylesheet" href="../CSS/Styles.css">
+  <link rel="stylesheet" href="../CSS/Style.css">
 
 </head>
 
@@ -19,8 +19,11 @@
 
   <div class="container-fluid font-monospace">
     <!-- Nombre de la app -->
-    <div class="row mb-4 align-items-center">
-      <div class="col-12 mb-5 titleBar">
+    <div class="row mb-4 align-items-center mb-5 titleBar">
+      <div class="col-5 col-lg-2 col-sm-3 text-center">
+       <img src="../Images/Logo.png" alt="Logo de Nebrija" class="img-fluid imgLogo">
+      </div>
+      <div class="col-6 col-lg-8 col-sm-6">
         <p class="text-center text-white mb-1 mt-1 pt-3 pb-3 titleAssist">Control De Asistencia</p>
       </div>
     </div>
@@ -28,7 +31,7 @@
     <div class="row justify-content-center align-items-center text-center g-2">
       <div class="col-12 col-md-10 col-xl-8 col-xxl-6 mt-4 position-absolute top-50 start-50 translate-middle">
         <div class="text-dark stForm">
-          <p class="h2 text-center pt-3 pb-3">Estudiantes DAW Grupo 1</p>
+          <p class="h2 text-center text-white pt-3 pb-3">Estudiantes DAW Grupo 1</p>
           <form action="" method="post">
             <!-- Assist Radio Button -->
             <div class="borLine">
@@ -48,7 +51,7 @@
             </div>
             
             <div class="text-center">
-                <button type="submit" class="btn mt-4 mb-3 text-black stBtn">Enviar</button>
+                <button type="submit" class="btn mt-4 mb-3 text-white stBtn">Enviar</button>
               </div>
           </form>
         </div>

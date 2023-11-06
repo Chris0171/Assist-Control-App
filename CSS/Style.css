@@ -1,43 +1,45 @@
 body{
-  background-image: linear-gradient(to right, rgb(122, 144, 165),rgb(106, 172, 172));
+  background-image: linear-gradient(to right, rgb(237, 237, 237),rgb(222, 222, 222), rgb(237, 237, 237));
 }
 .stForm{
-  border: 6px solid rgb(76, 76, 76);
+  border: 6px solid rgb(30, 30, 30);
   border-radius: 18px;
   padding: 2%;
   padding-left: 6%;
   padding-right: 6%;
   box-shadow: 5px 7px 12px rgb(35, 35, 35);
-  background-image: linear-gradient(-40deg, rgb(130, 168, 206)50%, rgb(160, 215, 215) 49%);
+  background-image: linear-gradient(-30deg, rgb(218 218 218)50%, rgb(191,4,54) 49%);
 }
 .form-control{
-  border: 3.5px solid rgb(76, 76, 76);
+  border: 3.5px solid rgb(30, 30, 30);
   border-radius: 12px;
   box-shadow: 3px 4px 8px black;
 }
 .form-control:focus{
-  border: 3.5px solid rgb(76, 76, 76);
+  border: 3.5px solid rgb(30, 30, 30);
 }
 .form-control:focus{
-  border: 3.5px solid #41a04b;
+  border: 3.5px solid rgb(147, 147, 147);
   box-shadow: 3px 4px 8px black;
 }
 .stBtn{
-  border-radius: 8px;
-  background-color: rgb(160, 215, 215);
+  /*border: 3.5px solid rgb(30, 30, 30);*/
+  border-radius: 16px;
+  background-color: rgb(191,4,54);
   box-shadow: 3px 4px 8px black;
 }
 .stBtn:hover{
-  background-color: rgb(99, 198, 198);
+  background-color: rgb(0, 0, 0);
+  color: white;
 }
 .stBtn:active{
   color: white;
-  background-color: rgb(35, 159, 159);
+  background-color: rgb(86, 86, 86)
 }
 .titleBar{
-  border-bottom: 10px solid rgb(76, 76, 76);
-  box-shadow: 5px 7px 12px rgb(35, 35, 35);
-  background-image: linear-gradient(to bottom, rgb(37, 96, 154), rgb(85, 142, 198));
+  border-bottom: 10px solid rgb(30, 30, 30);
+  box-shadow: 5px 7px 12px rgb(81, 81, 81);
+  background-image: linear-gradient(to bottom, rgb(191,4,54), rgb(141, 13, 47));
 }
 .titleAssist{
   font-size: 2.8vw;
@@ -60,6 +62,9 @@ body{
   box-shadow: 0.2vw 0.3vw 0.5vw black;
   color: black;
 }
+.imgLogo{
+  width: 40%;
+}
 
 /* Estilos por break pointss */
 @media screen and (max-width: 767px) {
@@ -70,7 +75,7 @@ body{
     font-size: 4vw;
   }
   .titleAssist{
-    font-size: 8vw;
+    font-size: 7.5vw;
   }
   /* AssistForm page */
   .borLine{
@@ -78,6 +83,9 @@ body{
   }
   .btnAssist{
     font-size: 1.93vw;
+  }
+  .imgLogo{
+    width: 70%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px){
@@ -88,7 +96,7 @@ body{
     font-size: 2.5vw;
   }
   .titleAssist{
-    font-size: 7.8vw;
+    font-size: 6vw;
   }
   /* AssistForm page */
   .borLine{
@@ -96,6 +104,9 @@ body{
   }
   .btnAssist{
     font-size: 1.75vw;
+  }
+  .imgLogo{
+    width: 70%;
   }
 }
 @media screen and (min-width: 992px) and (max-width: 1199px){
@@ -106,7 +117,7 @@ body{
     font-size: 2.0vw;
   }
   .titleAssist{
-    font-size: 6.5vw;
+    font-size: 5.5vw;
   }
   /* AssistForm page */
   .borLine{
@@ -114,6 +125,9 @@ body{
   }
   .btnAssist{
     font-size: 1.45vw;
+  }
+  .imgLogo{
+    width: 70%;
   }
 }
 @media screen and (min-width: 1200px) and (max-width: 1400px){
@@ -133,6 +147,9 @@ body{
   .btnAssist{
     font-size: 1.2vw;
   }
+  .imgLogo{
+    width: 70%;
+  }
 }
 @media screen and (min-width: 1401px){
   .form-control{
@@ -148,8 +165,10 @@ body{
   .borLine{
     font-size: 1.05vw;
   }
-  
   .btnAssist{
     font-size: 1.05vw;
+  }
+  .imgLogo{
+    width: 40%;
   }
 }

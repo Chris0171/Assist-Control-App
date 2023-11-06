@@ -9,15 +9,18 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!-- Assist-Control CSS -->
-  <link rel="stylesheet" href="../CSS/Styles.css">
+  <link rel="stylesheet" href="../CSS/Style.css">
 
 </head>
 <body>
 
   <div class="container-fluid font-monospace">
     <!-- Nombre de la app -->
-    <div class="row mb-4 align-items-center">
-      <div class="col-12 mb-5 titleBar">
+    <div class="row mb-4 align-items-center mb-5 titleBar">
+      <div class="col-5 col-lg-2 col-sm-3 text-center">
+        <img src="../Images/Logo.png" alt="Logo de Nebrija" class="img-fluid imgLogo">
+      </div>
+      <div class="col-6 col-lg-8 col-sm-6">
         <p class="text-center text-white mb-1 mt-1 pt-3 pb-3 titleAssist">Control De Asistencia</p>
       </div>
     </div>
@@ -36,7 +39,7 @@
             <input type="password" class="form-control" autocomplete="current-password" name="inputPassword"  placeholder="Contraseña" required>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn mt-4 mb-3 text-black stBtn">INICIAR SESIÓN</button>
+            <button type="submit" class="btn mt-4 mb-3 text-white stBtn">INICIAR SESIÓN</button>
           </div>
         </form>
         </div>
