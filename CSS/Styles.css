@@ -1,174 +1,245 @@
-body{
-  background-image: linear-gradient(to right, rgb(237, 237, 237),rgb(222, 222, 222), rgb(237, 237, 237));
+body {
+  background-image: linear-gradient(to right, rgb(237, 237, 237), rgb(222, 222, 222), rgb(237, 237, 237));
 }
-.stForm{
+
+.stForm {
   border: 6px solid rgb(30, 30, 30);
   border-radius: 18px;
   padding: 2%;
   padding-left: 6%;
   padding-right: 6%;
   box-shadow: 5px 7px 12px rgb(35, 35, 35);
-  background-image: linear-gradient(-30deg, rgb(218 218 218)50%, rgb(191,4,54) 49%);
+  background-image: linear-gradient(-30deg, rgb(218 218 218)50%, rgb(191, 4, 54) 49%);
 }
-.form-control{
+
+.form-control {
   border: 3.5px solid rgb(30, 30, 30);
   border-radius: 12px;
   box-shadow: 3px 4px 8px black;
 }
-.form-control:focus{
+
+.form-control:focus {
   border: 3.5px solid rgb(30, 30, 30);
 }
-.form-control:focus{
+
+.form-control:focus {
   border: 3.5px solid rgb(147, 147, 147);
   box-shadow: 3px 4px 8px black;
 }
-.stBtn{
-  /*border: 3.5px solid rgb(30, 30, 30);*/
+
+.stBtn {
   border-radius: 16px;
-  background-color: rgb(191,4,54);
+  background-color: rgb(191, 4, 54);
   box-shadow: 3px 4px 8px black;
 }
-.stBtn:hover{
+
+.stBtn:hover {
   background-color: rgb(0, 0, 0);
   color: white;
 }
-.stBtn:active{
+
+.stBtn:active {
   color: white;
   background-color: rgb(86, 86, 86)
 }
-.titleBar{
+
+.titleBar {
   border-bottom: 10px solid rgb(30, 30, 30);
   box-shadow: 5px 7px 12px rgb(81, 81, 81);
-  background-image: linear-gradient(to bottom, rgb(191,4,54), rgb(141, 13, 47));
+  background-image: linear-gradient(to bottom, rgb(191, 4, 54), rgb(141, 13, 47));
 }
-.titleAssist{
+
+.titleAssist {
   font-size: 2.8vw;
 }
 
 /* AssistForm page */
-.borLine{
+.borLine {
   font-size: 1.1vw;
   padding: 0.8%;
   padding-top: 1.2%;
   padding-bottom: 1.2%;
-  border: 3px solid rgb(76, 76, 76);
-  border-radius: 1vw;
+  border: 3px solid rgb(21, 21, 21);
+  border-radius: 100px;
   background-color: rgb(222, 222, 222);
   box-shadow: 0.3vw 0.4vw 0.7vw rgb(32, 32, 32);
 }
-.btnAssist{
+
+.btnAssist {
   font-size: 1.1vw;
   border-radius: 1vw;
   box-shadow: 0.2vw 0.3vw 0.5vw black;
   color: black;
 }
-.imgLogo{
+
+.imgLogo {
   width: 40%;
+}
+
+.imgSt {
+  margin-left: 4%;
+  transform: scale(0.92);
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 4px 2px 10px rgb(142 142 142);
+}
+
+#selectModules {
+  border-top: 5px solid green;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px gray;
+}
+
+#selectModules:focus {
+  border-top: 5px solid rgb(191, 4, 54);
+}
+
+#selectGroups {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s;
+  margin-top: 3%;
+  border-top: 5px solid green;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px gray;
+}
+
+#selectGroups:focus {
+  border-top: 5px solid rgb(191, 4, 54);
 }
 
 /* Estilos por break pointss */
 @media screen and (max-width: 767px) {
-  .form-control{
+  .form-control {
     font-size: 4vw;
   }
-  .stBtn{
+
+  .stBtn {
     font-size: 4vw;
   }
-  .titleAssist{
+
+  .titleAssist {
     font-size: 7.5vw;
   }
+
   /* AssistForm page */
-  .borLine{
+  .borLine {
     font-size: 1.93vw;
   }
-  .btnAssist{
+
+  .btnAssist {
     font-size: 1.93vw;
   }
-  .imgLogo{
+
+  .imgLogo {
     width: 70%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 991px){
-  .form-control{
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .form-control {
     font-size: 2.5vw;
   }
-  .stBtn{
+
+  .stBtn {
     font-size: 2.5vw;
   }
-  .titleAssist{
+
+  .titleAssist {
     font-size: 6vw;
   }
+
   /* AssistForm page */
-  .borLine{
+  .borLine {
     font-size: 1.75vw;
   }
-  .btnAssist{
+
+  .btnAssist {
     font-size: 1.75vw;
   }
-  .imgLogo{
+
+  .imgLogo {
     width: 70%;
   }
 }
-@media screen and (min-width: 992px) and (max-width: 1199px){
-  .form-control{
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .form-control {
     font-size: 2.0vw;
   }
-  .stBtn{
+
+  .stBtn {
     font-size: 2.0vw;
   }
-  .titleAssist{
+
+  .titleAssist {
     font-size: 5.5vw;
   }
+
   /* AssistForm page */
-  .borLine{
+  .borLine {
     font-size: 1.45vw;
   }
-  .btnAssist{
+
+  .btnAssist {
     font-size: 1.45vw;
   }
-  .imgLogo{
+
+  .imgLogo {
     width: 70%;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1400px){
-  .form-control{
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .form-control {
     font-size: 1.4vw;
   }
-  .stBtn{
+
+  .stBtn {
     font-size: 1.4vw;
   }
-  .titleAssist{
+
+  .titleAssist {
     font-size: 5vw;
   }
+
   /* AssistForm page */
-  .borLine{
+  .borLine {
     font-size: 1.2vw;
   }
-  .btnAssist{
+
+  .btnAssist {
     font-size: 1.2vw;
   }
-  .imgLogo{
+
+  .imgLogo {
     width: 70%;
   }
 }
-@media screen and (min-width: 1401px){
-  .form-control{
+
+@media screen and (min-width: 1401px) {
+  .form-control {
     font-size: 1.1vw;
   }
-  .stBtn{
+
+  .stBtn {
     font-size: 1.1vw;
   }
-  .titleAssist{
+
+  .titleAssist {
     font-size: 2.8vw;
   }
+
   /* AssistForm page */
-  .borLine{
+  .borLine {
     font-size: 1.05vw;
   }
-  .btnAssist{
+
+  .btnAssist {
     font-size: 1.05vw;
   }
-  .imgLogo{
+
+  .imgLogo {
     width: 40%;
   }
 }
