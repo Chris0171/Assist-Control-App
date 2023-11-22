@@ -15,7 +15,7 @@
 
 </head>
 
-<body onload="getData(1, 'selectModules', '../Actions/GetModules.act.php')">
+<body>
 
   <div class="container-fluid font-monospace">
     <!-- Header -->
@@ -37,49 +37,11 @@
     </div>
     <div class="row justify-content-center align-items-center text-center g-0">
       <div class="col-12 col-md-10 col-xl-8 col-xxl-6 mt-4">
-        <div class="text-dark stForm">
-          <p class="h2 text-center text-white pt-3 pb-3">Estudiantes DAW Grupo 1</p>
-          <form action="" method="post">
-            <!-- Assist Radio Button -->
-            <div class="borLine">
-              <div class="row justify-content-center align-items-center g-0">
-              <div class="col-3">
-                  <img src="../Images/StudentAccount/ChristianMilanes.jpg" class="img-fluid imgSt"
-                    alt="Fotografía del estudiante">
-                </div>
-                <div class="col-9">
-                  <div class="row justify-content-center align-items-center">
-                    <div class="col-12">
-                      <label class="text-dark fw-bold pb-4">Christian Milanés Rodríguez</label>
-                    </div>
-                  </div>
-                  <div class="row justify-content-center align-items-center">
-                    <div class="col-12">
-                      <div class="form-check form-check-inline">
-                        <input class="btn-check" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                          value="option1">
-                        <label class="btn btn-outline-success border border-3 border-success btnAssist"
-                          for="inlineRadio1">Presente</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="btn-check" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                          value="option3">
-                        <label class="btn btn-outline-warning border border-3 border-warning btnAssist"
-                          for="inlineRadio3">Retardo</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="btn-check" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                          value="option2">
-                        <label class="btn btn-outline-danger border border-3 border-danger btnAssist"
-                          for="inlineRadio2">Ausente</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn mt-4 mb-3 text-white stBtn">Enviar</button>
+        <div class="text-dark stForm" id="formCont">
+          <form action="" method="post" id="StudentForm">
+            <!-- Students instances -->
+            <div class="text-center" id="sendBtn">
+              <button type="submit" class="btn mb-3 text-white stBtn">Enviar</button>
             </div>
           </form>
         </div>
@@ -97,8 +59,8 @@
     crossorigin="anonymous"></script>
 
   <!-- Assist-Control CSS -->
-  <script src="../Scripts/AssistForm.js"></script>
-
+  <script type="module" src="../Scripts/AssistForm.js"></script>
+  
 </body>
 
 </html>

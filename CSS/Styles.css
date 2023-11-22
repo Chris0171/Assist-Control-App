@@ -108,6 +108,12 @@ body {
   border-top: 5px solid rgb(191, 4, 54);
 }
 
+#formCont{
+  display: none;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
 /* Estilos por break pointss */
 @media screen and (max-width: 767px) {
   .form-control {
