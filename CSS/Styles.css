@@ -2,6 +2,16 @@ body {
   background-image: linear-gradient(to right, rgb(237, 237, 237), rgb(222, 222, 222), rgb(237, 237, 237));
 }
 
+.subtitle {
+  font-family: "URW Heldustry W01 Medium";
+}
+
+.parr {
+  font-family: "URW Heldustry W01 Demi";
+}
+.title {
+  font-family: 'Times New Roman', Times, serif;
+}
 .stForm {
   border: 6px solid rgb(30, 30, 30);
   border-radius: 18px;
@@ -59,10 +69,14 @@ body {
   padding: 0.8%;
   padding-top: 1.2%;
   padding-bottom: 1.2%;
-  border: 3px solid rgb(21, 21, 21);
-  border-radius: 100px;
-  background-color: rgb(222, 222, 222);
-  box-shadow: 0.3vw 0.4vw 0.7vw rgb(32, 32, 32);
+  border: 1px solid rgb(0 0 0);
+  ;
+  border-left: 8px solid rgb(0 0 0);
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 1px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 10px 20px rgb(118, 118, 118);
 }
 
 .btnAssist {
@@ -79,7 +93,7 @@ body {
 .imgSt {
   margin-left: 4%;
   transform: scale(0.92);
-  border: 3px solid #ffffff;
+  border: 3px solid rgb(200, 200, 200);
   border-radius: 50%;
   box-shadow: 4px 2px 10px rgb(142 142 142);
 }
@@ -108,10 +122,91 @@ body {
   border-top: 5px solid rgb(191, 4, 54);
 }
 
-#formCont{
+#formCont {
   display: none;
   opacity: 0;
   transition: opacity 1s;
+}
+
+.extraForm {
+  border-radius: 10px;
+  padding: 2%;
+  padding-left: 6%;
+  padding-right: 6%;
+  background-color: rgb(214, 214, 214);
+}
+
+.borderForm {
+  background-image: linear-gradient(-20deg, rgb(191, 4, 54), rgb(112, 67, 0) , rgb(191, 4, 54));
+  box-shadow: 10px 10px 20px rgb(35, 35, 35);
+  border-radius: 15px;
+  padding: 1%;
+}
+
+.borderPanel {
+  background-image: linear-gradient(-20deg, rgb(191, 4, 54), rgb(37, 112, 0) , rgb(191, 4, 54));
+  box-shadow: 10px 10px 20px rgb(35, 35, 35);
+  border-radius: 15px;
+  padding: 0.6%;
+}
+
+svg {
+  width: 12vw;
+  height: 12vw;
+}
+
+circle {
+  fill: none;
+  stroke: rgb(255, 0, 68);
+  stroke-width: 16%;
+  stroke-dasharray: 100 0;
+  transform: rotate(-90deg);
+  transform-origin: 50%;
+}
+
+circle:nth-child(2) {
+  stroke-dasharray: 0 100;
+  stroke: green;
+  animation: fillOut .50s linear forwards;
+}
+
+.percentage {
+  position: relative;
+}
+
+.percentage span {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8vw;
+  color: green;
+}
+
+#square {
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(255, 0, 68);
+}
+
+#square2 {
+  border: 1px solid black;
+  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  background-color: rgb(4, 119, 4);
+
+}
+.borEx{
+  padding: 1.5px;
+  border-radius: 20px;
+  background-color: rgb(97, 97, 97);
 }
 
 /* Estilos por break pointss */
@@ -140,6 +235,13 @@ body {
   .imgLogo {
     width: 70%;
   }
+  svg {
+    width: 25vw;
+    height: 25vw;
+  }
+  .borderPanel {
+    padding: 1.5%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -167,6 +269,10 @@ body {
   .imgLogo {
     width: 70%;
   }
+  svg {
+    width: 14vw;
+    height: 14vw;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -193,6 +299,10 @@ body {
 
   .imgLogo {
     width: 70%;
+  }
+  svg {
+    width: 13vw;
+    height: 13vw;
   }
 }
 
@@ -247,5 +357,11 @@ body {
 
   .imgLogo {
     width: 40%;
+  }
+}
+
+@keyframes fillOut {
+  to {
+    stroke-dasharray: var(--percentage) 100;
   }
 }

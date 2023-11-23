@@ -37,8 +37,8 @@
     </div>
     <div class="row justify-content-center align-items-center text-center g-0">
       <div class="col-12 col-md-10 col-xl-8 col-xxl-6 mt-4">
-        <div class="text-dark stForm" id="formCont">
-          <form action="" method="post" id="StudentForm">
+        <div class="mb-5 borderForm" id="formCont">
+          <form class="text-dark extraForm" action="" method="post" id="StudentForm">
             <!-- Students instances -->
             <div class="text-center" id="sendBtn">
               <button type="submit" class="btn mb-3 text-white stBtn">Enviar</button>

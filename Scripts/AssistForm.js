@@ -17,7 +17,7 @@ const strips = [[new Date().setHours(8, 30, 0), new Date().setHours(11, 15, 0)],
 
 // Functions
 const calculateStrip = () => (date = new Date(), (date >= strips[0][0] && date <= strips[0][1]) ? 0 : (date >= strips[0][0] && date <= strips[0][1]) ? 1 : -1);
-const checkDate = () => (date = newDate().getDay(), (date >= 2 && date <= 5) ? 0 : -1);
+const checkDate = () => (date = new Date().getDay(), (date >= 2 && date <= 5) ? 0 : -1);
 
 
 function getGroupName(value, selector) {
@@ -67,7 +67,7 @@ function createStudentInstance(data, htmlElem) {
     addGroupName(nameGroupSelect, htmlElem, selectGroups.value);
 
     for (let i = 0; i < data.length; i++) {
-      addStudentRow('ChristianMilanes.jpg', data[i].nombreAlumno + " " + data[i].apellidosAlumno, htmlElem, selectGroups.value);
+      addStudentRow('ChristianMilanes.jpg', data[i][1] + " " + data[i][2], htmlElem, selectGroups.value);
     }
     idGroup = selectGroups.value;
   }, 500);

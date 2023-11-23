@@ -1,9 +1,10 @@
+// Añadir el nombre de grupo al formulario
 export function addGroupName(groupName, htmlElem, idGroup) {
   let containerElem = document.getElementById(htmlElem);
 
   // Crear parrafo con el nombre del grupo
   let text = document.createElement('p');
-  text.classList.add('h2', 'text-center', 'text-white', 'pt-3', 'pb-3');
+  text.classList.add('h2', 'text-center', 'text-black', 'pt-3', 'pb-3');
   text.id = "subtitle" + idGroup;
 
   //Agregar elemnto al formulario
@@ -11,6 +12,7 @@ export function addGroupName(groupName, htmlElem, idGroup) {
   containerElem.insertBefore(text, document.getElementById('sendBtn'));
 }
 
+// Crear una instancia de asistencia de alumno
 export function addStudentRow(imgName, studentName, htmlElem, idGroup) {
   let containerElem = document.getElementById(htmlElem);
 
@@ -127,7 +129,7 @@ function crearRadioButton(labelText, id, color) {
   return formCheckInline;
 }
 
-// Get data from a variable
+// Obtener datos a partir de una variable
 export function getData(valueData, htmlElem, ruta, createOptions) {
   fetch(ruta, {
     method: 'POST',
@@ -138,7 +140,6 @@ export function getData(valueData, htmlElem, ruta, createOptions) {
   })
     .then(response => response.json())
     .then(data => {
-      console.log(data);// Delete this line
       createOptions(data, htmlElem);
     })
     .catch(error => {

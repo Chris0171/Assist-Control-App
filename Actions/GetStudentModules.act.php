@@ -5,10 +5,10 @@ include("../Includes/Connection.inc.php");
 $conn = new DatabaseConnection("localhost", "root", "Lelouch01", "controlAsistencia");
 $conn->connect();
 
-$idGrupo = $_POST['value'];
+$idStudent = $_POST['value'];
 
-$res = $conn->query("SELECT * FROM Alumno WHERE
-idGrupo = $idGrupo;");
+$res = $conn->query("SELECT Modulo.idModulo, Modulo.nombreModulo, Modulo.porcentajeAsistencia FROM Modulo, AlumnoModulo WHERE
+AlumnoModulo.idAlumno = $idStudent AND AlumnoModulo.idModulo = Modulo.idModulo;");
 
 if ($res->num_rows > 0) {
   $groups = array();

@@ -4,7 +4,7 @@
       <img src="../Images/Logo.png" alt="Logo de Nebrija" class="img-fluid imgLogo">
     </div>
     <div class="col-6 col-lg-8 col-sm-6">
-      <p class="text-center text-white mb-1 mt-1 pt-3 pb-3 titleAssist">Control De Asistencia</p>
+      <p class="text-center text-white mb-1 mt-1 pt-3 pb-3 titleAssist title">CONTROL DE ASISTENCIA</p>
     </div>
   </div>
 </header>
