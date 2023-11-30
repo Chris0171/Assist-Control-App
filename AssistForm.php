@@ -11,16 +11,18 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!-- Assist-Control CSS -->
-  <link rel="stylesheet" href="../CSS/Styles.css">
+  <link rel="stylesheet" href="CSS/Styles.css">
 
 </head>
 
 <body>
 
   <div class="container-fluid font-monospace">
+
     <!-- Header -->
     <?php
-    include("../Includes/Header.inc.php");
+    $logoPath = "Images/Logo.png";
+    include("Includes/Header.inc.php");
     ?>
 
     <!-- Formulario de registro -->
@@ -47,6 +49,11 @@
         </div>
       </div>
     </div>
+    <!-- Footer -->
+    <?php
+    include("Includes/Footer.inc.php");
+    ?>
+
   </div>
 
 
@@ -59,8 +66,8 @@
     crossorigin="anonymous"></script>
 
   <!-- Assist-Control CSS -->
-  <script type="module" src="../Scripts/AssistForm.js"></script>
-  
+  <script type="module" src="Scripts/AssistForm.js"></script>
+
 </body>
 
 </html>

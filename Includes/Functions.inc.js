@@ -13,7 +13,7 @@ export function addGroupName(groupName, htmlElem, idGroup) {
 }
 
 // Crear una instancia de asistencia de alumno
-export function addStudentRow(imgName, studentName, htmlElem, idGroup) {
+export function addStudentRow(idStudent, imgName, studentName, htmlElem, idGroup) {
   let containerElem = document.getElementById(htmlElem);
 
   // Crear div para el contenedor de la fila
@@ -39,7 +39,7 @@ export function addStudentRow(imgName, studentName, htmlElem, idGroup) {
 
   // Crear la imagen
   let imagen = document.createElement('img');
-  imagen.src = '../Images/StudentAccount/' + imgName;
+  imagen.src = 'Images/StudentAccount/' + imgName;
   imagen.classList.add('img-fluid', 'imgSt');
   imagen.alt = 'Fotografía del estudiante';
 
@@ -65,10 +65,17 @@ export function addStudentRow(imgName, studentName, htmlElem, idGroup) {
   let nombreLabel = document.createElement('label');
   nombreLabel.classList.add('text-dark', 'fw-bold', 'pb-4');
   nombreLabel.textContent = studentName;
+  
+  // Crear un campo input oculto
+  let inputName = document.createElement('input');
+  inputName.setAttribute('name', 'studentName');
+  inputName.setAttribute('type', 'hidden');
+  inputName.setAttribute('value', idStudent);
+
 
   // Agregar la etiqueta al contenedor de la fila
   otherCol.appendChild(nombreLabel);
-
+  otherCol.appendChild(inputName);
   // Agregar la fila al contenedor de la columna 9
   col9Div.appendChild(nombreRow);
 
@@ -84,14 +91,17 @@ export function addStudentRow(imgName, studentName, htmlElem, idGroup) {
   radioButtonsRow.appendChild(radioCol);
   // Crear el primer radio button
   let radio1 = crearRadioButton('Presente', 'P', 'success');
+  radio1.setAttribute('name', 'estate');
   radioCol.appendChild(radio1);
 
   // Crear el segundo radio button
   let radio2 = crearRadioButton('Retardo', 'R', 'warning');
+  radio1.setAttribute('name', 'estate');
   radioCol.appendChild(radio2);
 
   // Crear el tercer radio button
   let radio3 = crearRadioButton('Ausente', 'A', 'danger');
+  radio1.setAttribute('name', 'estate');
   radioCol.appendChild(radio3);
 
   // Agregar la fila de radio buttons al contenedor de la columna 9
@@ -130,7 +140,7 @@ function crearRadioButton(labelText, id, color) {
 }
 
 // Obtener datos a partir de una variable
-export function getData(valueData, htmlElem, ruta, createOptions) {
+export function getData(valueData, htmlElem, ruta, action) {
   fetch(ruta, {
     method: 'POST',
     headers: {
@@ -140,7 +150,24 @@ export function getData(valueData, htmlElem, ruta, createOptions) {
   })
     .then(response => response.json())
     .then(data => {
-      createOptions(data, htmlElem);
+      action(data, htmlElem);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+export function getData2(data1, data2, htmlElem, ruta, action) {
+  fetch(ruta, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: 'value1=' + encodeURIComponent(data1) + '&value2=' + encodeURIComponent(data2),
+  })
+    .then(response => response.json())
+    .then(data => {
+      action(data, htmlElem);
     })
     .catch(error => {
       console.error('Error:', error);

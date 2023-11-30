@@ -1,12 +1,12 @@
 // Import Funtions
-/*import { addStudentRow } from './Includes/Functions.inc.js';*/
 import { addGroupName, addStudentRow, getData } from "../Includes/Functions.inc.js";
 
 // Vars
 let date;
 let nameGroupSelect = "";
 let idGroup = -1;
-// Get selectores as vars
+
+// Get HTML elements
 let selectModules = document.getElementById("selectModules");
 let selectGroups = document.getElementById("selectGroups");
 let formCont = document.getElementById("formCont");
@@ -67,7 +67,7 @@ function createStudentInstance(data, htmlElem) {
     addGroupName(nameGroupSelect, htmlElem, selectGroups.value);
 
     for (let i = 0; i < data.length; i++) {
-      addStudentRow('ChristianMilanes.jpg', data[i][1] + " " + data[i][2], htmlElem, selectGroups.value);
+      addStudentRow(data[i][0], 'ChristianMilanes.jpg', data[i][1] + " " + data[i][2], htmlElem, selectGroups.value);
     }
     idGroup = selectGroups.value;
   }, 500);
@@ -80,7 +80,7 @@ selectModules.addEventListener('change', function () {
   setTimeout(function () {
     selectGroups.style.opacity = '1';
   }, 10);
-  getData(selectModules.value, 'selectGroups', '../Actions/GetGroups.act.php', createOptions);
+  getData(selectModules.value, 'selectGroups', 'Actions/GetGroups.act.php', createOptions);
 });
 
 selectGroups.addEventListener('change', function () {
@@ -89,11 +89,18 @@ selectGroups.addEventListener('change', function () {
     formCont.style.opacity = '1';
   }, 10);
   nameGroupSelect = getGroupName(selectGroups.value, selectGroups);
-  getData(selectGroups.value, 'StudentForm', '../Actions/GetStudents.act.php', createStudentInstance);
+  getData(selectGroups.value, 'StudentForm', 'Actions/GetStudents.act.php', createStudentInstance);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-  getData(1, 'selectModules', '../Actions/GetModules.act.php', createOptions);
+
+  if(checkDate() == -1 || calculateStrip() == -1){
+    // Informar al profesor que no puede pasar lista
+  }else{
+    // Lógica de la aplicación en esta sesión
+    // getData(user, 'selectModules', 'Actions/GetModules.act.php', createOptions);
+  }
+  getData(1, 'selectModules', 'Actions/GetModules.act.php', createOptions);
 });
 
 

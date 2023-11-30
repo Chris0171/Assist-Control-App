@@ -11,7 +11,7 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!-- Assist-Control CSS -->
-  <link rel="stylesheet" href="../CSS/Style.css">
+  <link rel="stylesheet" href="../CSS/Styles.css">
 
 </head>
 
@@ -20,6 +20,7 @@
   <div class="container-fluid font-monospace">
     <!-- Header -->
     <?php
+    $logoPath = "../Images/Logo.png";
     include("../Includes/Header.inc.php");
     ?>
     <!-- Formulario de registro -->
@@ -27,16 +28,17 @@
       <div class="col-12 col-sm-10 col-md-8 col-xl-6 col-xxl-4 mt-4 position-absolute top-50 start-50 translate-middle">
         <div class="text-white stForm">
           <p class="display-5 text-center">INICIAR SESIÓN</p>
-          <form action="" method="post">
+          <form id="loginSubmit" action="../Actions/StartSession.act.php" method="post">
             <div class="form-group mb-3">
-              <label for="" class="form-label">Email: </label>
-              <input type="email" class="form-control" name="inputEmail" autocomplete="email"
-                placeholder="Correo electrónico" required>
+              <label for="" class="form-label fw-bold">Email: </label>
+              <input type="email" class="form-control" name="email" autocomplete="email"
+                placeholder="Correo electrónico" id="email" required>
             </div>
             <div class="form-group mb-3">
-              <label for="" class="form-label">Contraseña: </label>
-              <input type="password" class="form-control" autocomplete="current-password" name="inputPassword"
-                placeholder="Contraseña" required>
+              <label for="password" class="form-label fw-bold">Contraseña: </label>
+              <input type="password" class="form-control" autocomplete="current-password" name="password"
+                placeholder="Contraseña" id="password" required>
+                <p class="text-center text-danger fw-bold pt-2" id="passMessage"></p>
             </div>
             <div class="text-center">
               <button type="submit" class="btn mt-4 mb-3 text-white stBtn">INICIAR SESIÓN</button>
@@ -57,6 +59,7 @@
     crossorigin="anonymous"></script>
 
   <!-- Assist-Control CSS -->
+  <script type="module" src="../Scripts/Login_script.js"></script>
 
 </body>
 

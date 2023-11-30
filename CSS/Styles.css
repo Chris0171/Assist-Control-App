@@ -7,11 +7,18 @@ body {
 }
 
 .parr {
-  font-family: "URW Heldustry W01 Demi";
+  font-family: Helvetica, sans-serif;
 }
+
 .title {
   font-family: 'Times New Roman', Times, serif;
 }
+
+.footerSt {
+  background-image: linear-gradient(to bottom, rgb(191, 4, 54), rgb(141, 13, 47));
+  padding: 1%;
+}
+
 .stForm {
   border: 6px solid rgb(30, 30, 30);
   border-radius: 18px;
@@ -26,10 +33,6 @@ body {
   border: 3.5px solid rgb(30, 30, 30);
   border-radius: 12px;
   box-shadow: 3px 4px 8px black;
-}
-
-.form-control:focus {
-  border: 3.5px solid rgb(30, 30, 30);
 }
 
 .form-control:focus {
@@ -107,7 +110,15 @@ body {
 #selectModules:focus {
   border-top: 5px solid rgb(191, 4, 54);
 }
+.selectModules {
+  border-top: 5px solid green;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px gray;
+}
 
+.selectModules:focus {
+  border-top: 5px solid rgb(191, 4, 54);
+}
 #selectGroups {
   display: none;
   opacity: 0;
@@ -137,14 +148,14 @@ body {
 }
 
 .borderForm {
-  background-image: linear-gradient(-20deg, rgb(191, 4, 54), rgb(112, 67, 0) , rgb(191, 4, 54));
+  background-image: linear-gradient(-20deg, rgb(191, 4, 54), rgb(112, 67, 0), rgb(191, 4, 54));
   box-shadow: 10px 10px 20px rgb(35, 35, 35);
   border-radius: 15px;
   padding: 1%;
 }
 
 .borderPanel {
-  background-image: linear-gradient(-20deg, rgb(191, 4, 54), rgb(37, 112, 0) , rgb(191, 4, 54));
+  background-image: linear-gradient(-20deg, rgb(191, 4, 54), rgb(37, 112, 0), rgb(191, 4, 54));
   box-shadow: 10px 10px 20px rgb(35, 35, 35);
   border-radius: 15px;
   padding: 0.6%;
@@ -187,6 +198,10 @@ circle:nth-child(2) {
   color: green;
 }
 
+.separator {
+  display: none;
+}
+
 #square {
   border: 1px solid black;
   border-radius: 3px;
@@ -203,10 +218,65 @@ circle:nth-child(2) {
   background-color: rgb(4, 119, 4);
 
 }
-.borEx{
+
+.borEx {
   padding: 1.5px;
   border-radius: 20px;
   background-color: rgb(97, 97, 97);
+}
+
+.miniBar {
+  border-top: 5px solid red;
+  box-shadow: 0px 3px 10px gray;
+  border-radius: 5px;
+}
+
+.normalSt {
+  border: 2px solid rgb(115, 115, 115);
+  border-radius: 6px;
+  box-shadow: 0px 1px 8px gray;
+}
+
+.normalSt:focus {
+  border: 2px solid rgb(115, 115, 115);
+  border-radius: 5px;
+  box-shadow: 0px 1px 8px gray;
+}
+
+/* Filter class */
+.filter {
+  display: none;
+}
+
+.searchIco {
+  position: absolute;
+  top: 25%;
+  left: 4.5%;
+  transform: scale(1.6);
+}
+
+.searchInput {
+  padding-left: 12%;
+  padding-bottom: 2%
+}
+
+.moreDetails {
+  font-size: 3vw;
+  transition: font-size 0.2 ease;
+}
+
+.moreDetails:hover {
+  color: #3d3d3d;
+  font-size: 3.1vw;
+}
+
+.btnMore {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-family: inherit;
 }
 
 /* Estilos por break pointss */
@@ -235,12 +305,30 @@ circle:nth-child(2) {
   .imgLogo {
     width: 70%;
   }
+
   svg {
     width: 25vw;
     height: 25vw;
   }
+
   .borderPanel {
     padding: 1.5%;
+  }
+
+  .separator {
+    display: block;
+  }
+
+  .percentage span {
+    font-size: 4.8vw;
+  }
+
+  .subText {
+    font-size: 3.5vw;
+  }
+
+  .normalSt {
+    font-size: 3.2vw;
   }
 }
 
@@ -269,9 +357,22 @@ circle:nth-child(2) {
   .imgLogo {
     width: 70%;
   }
+
   svg {
     width: 14vw;
     height: 14vw;
+  }
+
+  .percentage span {
+    font-size: 3vw;
+  }
+
+  .subText {
+    font-size: 2.8vw;
+  }
+
+  .normalSt {
+    font-size: 2.6vw;
   }
 }
 
@@ -300,9 +401,22 @@ circle:nth-child(2) {
   .imgLogo {
     width: 70%;
   }
+
   svg {
     width: 13vw;
     height: 13vw;
+  }
+
+  .percentage span {
+    font-size: 2.5vw;
+  }
+
+  .subText {
+    font-size: 2.3vw;
+  }
+
+  .normalSt {
+    font-size: 2.1vw;
   }
 }
 
@@ -331,6 +445,18 @@ circle:nth-child(2) {
   .imgLogo {
     width: 70%;
   }
+
+  .percentage span {
+    font-size: 2vw;
+  }
+
+  .subText {
+    font-size: 2vw;
+  }
+
+  .normalSt {
+    font-size: 1.8vw;
+  }
 }
 
 @media screen and (min-width: 1401px) {
@@ -358,6 +484,18 @@ circle:nth-child(2) {
   .imgLogo {
     width: 40%;
   }
+
+  .subText {
+    font-size: 1.45vw;
+  }
+
+  .normalSt {
+    font-size: 1.3vw;
+  }
+  .percentage span {
+    font-size: 1.7vw;
+  }
+
 }
 
 @keyframes fillOut {

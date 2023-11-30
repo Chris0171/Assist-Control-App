@@ -9,9 +9,10 @@
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
   <!-- Assist-Control CSS -->
-  <link rel="stylesheet" href="../CSS/Styles.css">
+  <link rel="stylesheet" href="CSS/Styles.css">
 
   <!-- Fonts -->
   <link href="https://db.onlinewebfonts.com/c/480ddcdbf6e34bde73dfaed605fafcb3?family=Gobold" rel="stylesheet">
@@ -24,35 +25,36 @@
 
 <body>
 
-  <div class="container-fluid font-monospace">
+  <div class="container-fluid">
     <!-- Header -->
     <?php
-    include("../Includes/Header.inc.php");
+    $logoPath = "Images/Logo.png";
+    include("Includes/Header.inc.php");
     ?>
 
     <div class="row justify-content-center align-items-center g-0">
       <div class="col-10 col-md-4 text-center p-3">
         <div></div>
         <select id="selectModules" class="form-select form-select-lg text-center mb-5" name="">
-          
         </select>
       </div>
     </div>
     <!-- Student Information -->
-    <div class="row justify-content-center align-items-center g-0">
-      <div class="col-12 col-sm-10 col-md-8 borderPanel">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-md-10 col-lg-8 mb-4 borderPanel">
         <div class="extraForm">
           <div class="row justify-content-center align-items-center g-0">
             <div class="col-12 col-md-6">
               <div class="row justify-content-center align-items-center g-0">
                 <!-- Student personal Information-->
-                <div class="col-6">
-                  <img id="studentImg" src="../Images/StudentAccount/ChristianMilanes.jpg" class="img-fluid imgSt"
+                <div class="col-6" style="position: relative;">
+                  <img id="studentImg" src="Images/StudentAccount/ChristianMilanes.jpg" class="img-fluid imgSt"
                     alt="Fotografía del estudiante">
                 </div>
                 <div class="col-6 ps-4 text-start">
-                  <p class="p-2" id="StudentGroup">DAW GRUPO 1</p>
-                  <p class="p-2" id="StudentName">Christian Milanés Rodríguez</p>
+                  <p class="p-2 subtitle fw-bold" id="StudentGroup">DAW GRUPO 1</p>
+                  <p class="p-2 subtitle fw-bold" id="StudentName">Christian Milanés Rodríguez</p>
+                  <i class="p-2 pt-3 bi subtitle bi-pencil-fill text-info">Cambiar foto de perfil</i>
                 </div>
               </div>
               <div class="row align-items-center g-2">
@@ -67,9 +69,12 @@
             </div>
             <!-- Students graphics -->
             <div class="col-12 col-md-6">
+              <div class="row align-items-center g-0 separator">
+                <div class="col-11 mt-4 mb-4 borEx"></div>
+              </div>
               <div class="row justify-content-center align-items-center g-2">
                 <div class="col-10">
-                  <p class="subtilte text-center" id="moduleName">--</p>
+                  <p class="text-center subtitle fw-bold" id="moduleName">--</p>
                 </div>
               </div>
               <div class="row justify-content-center align-items-center g-0">
@@ -79,7 +84,7 @@
                     <svg>
                       <circle r="42%" cx="50%" cy="50%" pathlength="100"></circle>
                       <circle r="42%" cx="50%" cy="50%" pathlength="100"></circle>
-                      <span>80%</span>
+                      <span id="assistancePor" class="fw-bold">80%</span>
                     </svg>
                   </div>
                 </div>
@@ -90,13 +95,13 @@
                   <div id="square"></div>
                 </div>
                 <div class="col-4 text-start pt-3">
-                  <p class="subtitle" id="lack">Ausencias: 20%</p>
+                  <p class="subtitle" id="lack">Ausencias</p>
                 </div>
                 <div class="col-1 text-end">
                   <div id="square2"></div>
                 </div>
                 <div class="col-4 text-start pt-3">
-                  <p class="subtitle" id="attendance">Asistencia: 80%</p>
+                  <p class="subtitle" id="assistance">Asistencia</p>
                 </div>
               </div>
             </div>
@@ -104,7 +109,9 @@
         </div>
       </div>
     </div>
-
+    <?php
+    include("Includes/Footer.inc.php");
+    ?>
   </div>
 
 
@@ -117,7 +124,8 @@
     crossorigin="anonymous"></script>
 
   <!-- Assist-Control CSS -->
-  <script type="module" src="../Scripts/StudentInfo.js"></script>
+  <script type="module" src="Scripts/StudentInfo.js"></script>
+
 </body>
 
 </html>

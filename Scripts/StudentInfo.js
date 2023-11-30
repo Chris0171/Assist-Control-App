@@ -1,12 +1,13 @@
 // Includes
-import { getData } from "../Includes/Functions.inc.js";
+import { getData, getData2 } from "../Includes/Functions.inc.js";
 
 let htmlElements = ['StudentName', 'StudentImg', 'StudentGroup'];
 let modules = [];
+let user; // Change value to zero
 
 // Get HTML elements
 let lack = document.getElementById("lack");
-let attendance = document.getElementById("attendance");
+let assistance = document.getElementById("assistance");
 let moduleSelector = document.getElementById("selectModules");
 
 // Functions
@@ -27,24 +28,31 @@ function studentInit(data, htmlElements) {
   //document.getElementById(htmlElements[1]).textContent = data[0][4];
 }
 
+// Print module name
 const printModule = (moduleName) => modules.forEach(element => (moduleName == element) ? document.getElementById('moduleName').textContent = element : null);
 
 // Print the group name
 const groupNameInit = (data, htmlElem) => document.getElementById(htmlElem).textContent = `${data[0][0]} de ${data[0][1]} º  año.`;
 
+const printAssistencePorcent = (data, htmlElem) => document.getElementById(htmlElem).textContent = `${data[0][0]}%`;
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Obtener localmente el idUsuario : por defecto será 1
-  getData(18, 'selectModules', '../Actions/GetStudentModules.act.php', createModuleOptions);
-  getData(18, htmlElements, '../Actions/GetStudentById.act.php', studentInit);
-  getData(18, htmlElements[2], '../Actions/GetStudentGroup.act.php', groupNameInit)
-});
+const setUser = (data, idStudent) => user = idStudent = `${data['idAlumno']}`;
 
+// Events
 moduleSelector.addEventListener('change', function () {
   let selec = moduleSelector.selectedIndex;
   printModule(moduleSelector.options[selec].text);
-  
-  //getData(module, htmlElements, '../Actions/GetStudents.act.php');
-})
+  getData2(user, moduleSelector.value, 'assistancePor', 'Actions/GetAssistencePorcent.act.php', printAssistencePorcent);
+});
 
-
+document.addEventListener('DOMContentLoaded', function () {
+  getData(true, user, 'Actions/GetUserData.act.php', setUser);
+  setTimeout(function () {
+    getData(user, 'selectModules', 'Actions/GetStudentModules.act.php', createModuleOptions);
+    getData(user, htmlElements, 'Actions/GetStudentById.act.php', studentInit);
+    getData(user, htmlElements[2], 'Actions/GetStudentGroup.act.php', groupNameInit);
+    setTimeout(function () {
+      getData2(user, moduleSelector.value, 'assistancePor', 'Actions/GetAssistencePorcent.act.php', printAssistencePorcent);
+    }, 40);
+  }, 40);
+});
