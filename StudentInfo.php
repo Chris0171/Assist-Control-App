@@ -54,7 +54,8 @@
                 <div class="col-6 ps-4 text-start">
                   <p class="p-2 subtitle fw-bold" id="StudentGroup">DAW GRUPO 1</p>
                   <p class="p-2 subtitle fw-bold" id="StudentName">Christian Milanés Rodríguez</p>
-                  <i class="p-2 pt-3 bi subtitle bi-pencil-fill text-info">Cambiar foto de perfil</i>
+                  <!-- <i class="p-2 pt-3 bi bi-pencil-fill fw-bold text-decoration-underline subtitle"
+                    id="changePhoto">Cambiar foto de perfil</i> -->
                 </div>
               </div>
               <div class="row align-items-center g-2">

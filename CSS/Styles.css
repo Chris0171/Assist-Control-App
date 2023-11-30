@@ -278,6 +278,16 @@ circle:nth-child(2) {
   background: none;
   font-family: inherit;
 }
+#changePhoto{
+  cursor: pointer;
+  color: rgb(0, 99, 28);
+}
+#changePhoto:hover{
+  color: rgb(0, 180, 51);
+}
+#changePhoto:active{
+  color: rgb(0, 126, 36);
+}
 
 /* Estilos por break pointss */
 @media screen and (max-width: 767px) {

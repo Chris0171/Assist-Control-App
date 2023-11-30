@@ -3,8 +3,8 @@
     <div class="col-4 pe-4 text-end text-white">
       <a href="ReportForm.php">Reportar Incidencia</a>
     </div>
-    <div class="col-4 text-center text-white">
-      <img id="studentImg" src="" class="img-fluid imgSt" alt="Instituto Nebrija">
+    <div class="col-4 text-center">
+      <img id="studentImg" src="Images/NebrijaLogo2.png" class="img-fluid" alt="Instituto Nebrija">
     </div>
     <div class="col-4 ps-4">
       <p class="h3 subtilte text-white">Contacto</p>
