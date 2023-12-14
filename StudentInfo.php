@@ -81,11 +81,11 @@
               <div class="row justify-content-center align-items-center g-0">
                 <div class="col-12 text-center">
                   <!-- Ausencias -->
-                  <div class="percentage" style="--percentage: 80">
+                  <div class="percentage" id="percen" style="--percentage: 80">
                     <svg>
                       <circle r="42%" cx="50%" cy="50%" pathlength="100"></circle>
                       <circle r="42%" cx="50%" cy="50%" pathlength="100"></circle>
-                      <span id="assistancePor" class="fw-bold">80%</span>
+                      <span id="assistancePor" class="fw-bold">0%</span>
                     </svg>
                   </div>
                 </div>
@@ -110,11 +110,14 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="container-fluid">
     <?php
     include("Includes/Footer.inc.php");
     ?>
   </div>
-
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

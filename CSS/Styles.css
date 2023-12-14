@@ -1,7 +1,13 @@
 body {
   background-image: linear-gradient(to right, rgb(237, 237, 237), rgb(222, 222, 222), rgb(237, 237, 237));
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
 }
-
+.container-fluid:nth-child(1){
+  flex: 1;
+}
 .subtitle {
   font-family: "URW Heldustry W01 Medium";
 }
@@ -289,6 +295,16 @@ circle:nth-child(2) {
   color: rgb(0, 126, 36);
 }
 
+.assistTable{
+  padding: 1%;
+  border-radius: 14px;
+  border: 6px solid rgb(30, 30, 30);
+  background-image: linear-gradient(to bottom, rgb(176, 30, 69, 0.9), rgb(130, 30, 57, 0.9));
+  font-family: monospace;
+}
+.thSt{
+  border-bottom: 8px solid rgb(239, 239, 239);
+}
 /* Estilos por break pointss */
 @media screen and (max-width: 767px) {
   .form-control {

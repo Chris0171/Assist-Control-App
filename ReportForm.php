@@ -38,7 +38,7 @@
           <form action="Actions/ReportError.act.php" method="post">
             <div class="form-group mb-3">
               <label for="textAreaD" class="form-label">Descripción del error: </label>
-              <textarea class="form-control" id="textAreaD" rows="2"></textarea>
+              <textarea placeholder="Explicanos el error que encontraste..." class="form-control" id="textAreaD" rows="2"></textarea>
             </div>
             <div class="form-group mb-3">
               <label for="formFile" class="form-label">Subir una captura del error: </label>
@@ -51,9 +51,14 @@
         </div>
       </div>
     </div>
-
   </div>
 
+  <!-- Footer -->
+  <div class="container-fluid">
+    <?php
+    include("Includes/Footer.inc.php");
+    ?>
+  </div>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -62,8 +67,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
-
-  <!-- Assist-Control CSS -->
 
 </body>
 

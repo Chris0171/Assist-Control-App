@@ -28,6 +28,7 @@
   <div class="container-fluid">
     <!-- Header -->
     <?php
+    $logoPath = "Images/Logo.png";
     include("Includes/Header.inc.php");
     ?>
 
@@ -49,13 +50,14 @@
         ?>
       </div>
     </div>
+  </div>
 
-    <!-- Footer -->
+  <!-- Footer -->
+  <div class="container-fluid">
     <?php
     include("Includes/Footer.inc.php");
     ?>
   </div>
-
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -65,8 +67,9 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
 
-  <!-- Assist-Control CSS -->
+  <!-- Assist-Control JavaScript -->
   <script type="module" src="Scripts/Reports_HofS.js"></script>
+  
 </body>
 
 </html>

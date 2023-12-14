@@ -88,11 +88,12 @@
     </div>
   </div>
   <div class="col-1 ps-2 mt-3">
-    <form action="">
+    <form action="MoreStudentInfo.php" method="post">
       <input type="hidden" name="idStudent" class="idValue"  value="<?php echo $reg[0]; ?>">
-      <input type="hidden" name="idStudent" class="moduleValue"  value="0">
+      <input type="hidden" name="module" class="moduleValue"  value="<?php echo $reg2[0]; ?>">
+      <input type="hidden" name="studentName" value="<?php echo $reg[1] . " " . $reg[2] ?>">
+      <input type="hidden" name="studentGroup" value="<?php echo $groupRow[0] . " de " . $groupRow[1] . "º año."; ?>">
       <button class="btnMore" type="submit"><i class="bi bi-three-dots-vertical align-baseline moreDetails"></i></button>
     </form>
   </div>
-
 </div>

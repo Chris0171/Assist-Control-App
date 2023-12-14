@@ -1,4 +1,4 @@
-<footer class="mt-5">
+<footer class="mt-5 no-gutter">
   <div class="row align-items-center justify-content-center footerSt">
     <div class="col-4 pe-4 text-end text-white">
       <a href="ReportForm.php">Reportar Incidencia</a>

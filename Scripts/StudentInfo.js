@@ -8,7 +8,7 @@ let user; // Change value to zero
 // Get HTML elements
 let lack = document.getElementById("lack");
 let assistance = document.getElementById("assistance");
-let moduleSelector = document.getElementById("selectModules");
+const moduleSelector = document.getElementById("selectModules");
 
 // Functions
 function createModuleOptions(data, htmlElem) {
@@ -25,7 +25,7 @@ function createModuleOptions(data, htmlElem) {
 }
 function studentInit(data, htmlElements) {
   document.getElementById(htmlElements[0]).textContent = data[0][1] + data[0][2];
-  //document.getElementById(htmlElements[1]).textContent = data[0][4];
+  //document.getElementById(htmlElements[1]).src = "Images/StudentAccount/" + data[0][4];
 }
 
 // Print module name
@@ -34,8 +34,12 @@ const printModule = (moduleName) => modules.forEach(element => (moduleName == el
 // Print the group name
 const groupNameInit = (data, htmlElem) => document.getElementById(htmlElem).textContent = `${data[0][0]} de ${data[0][1]} º  año.`;
 
-const printAssistencePorcent = (data, htmlElem) => document.getElementById(htmlElem).textContent = `${data[0][0]}%`;
 
+function printAssistencePorcent (data, htmlElem){
+  document.getElementById(htmlElem).textContent = `${data[0][0]}%`;
+  const percen = document.getElementById('percen');
+  percen.style.setProperty("--percentage", data[0][0]);
+}
 const setUser = (data, idStudent) => user = idStudent = `${data['idAlumno']}`;
 
 // Events
@@ -53,6 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
     getData(user, htmlElements[2], 'Actions/GetStudentGroup.act.php', groupNameInit);
     setTimeout(function () {
       getData2(user, moduleSelector.value, 'assistancePor', 'Actions/GetAssistencePorcent.act.php', printAssistencePorcent);
-    }, 40);
-  }, 40);
+    },50);
+  }, 50);
 });

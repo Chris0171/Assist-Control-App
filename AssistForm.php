@@ -49,13 +49,14 @@
         </div>
       </div>
     </div>
-    <!-- Footer -->
+  </div>
+
+  <!-- Footer -->
+  <div class="container-fluid">
     <?php
     include("Includes/Footer.inc.php");
     ?>
-
   </div>
-
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
