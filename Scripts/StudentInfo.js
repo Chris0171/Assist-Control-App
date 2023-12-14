@@ -6,8 +6,6 @@ let modules = [];
 let user; // Change value to zero
 
 // Get HTML elements
-let lack = document.getElementById("lack");
-let assistance = document.getElementById("assistance");
 const moduleSelector = document.getElementById("selectModules");
 
 // Functions
@@ -24,8 +22,10 @@ function createModuleOptions(data, htmlElem) {
   printModule(data[0][1]);
 }
 function studentInit(data, htmlElements) {
-  document.getElementById(htmlElements[0]).textContent = data[0][1] + data[0][2];
-  //document.getElementById(htmlElements[1]).src = "Images/StudentAccount/" + data[0][4];
+  document.getElementById(htmlElements[0]).textContent = data[0][1] + " " + data[0][2];
+  let imgPath = "Images/StudentAccount/" + `${data[0][4]}`;
+  console.log(imgPath);
+  document.getElementById(htmlElements[1]).src = imgPath;
 }
 
 // Print module name

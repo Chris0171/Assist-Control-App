@@ -68,10 +68,9 @@ export function addStudentRow(idStudent, imgName, studentName, htmlElem, idGroup
   
   // Crear un campo input oculto
   let inputName = document.createElement('input');
-  inputName.setAttribute('name', 'studentName');
+  inputName.setAttribute('name', 'idStudents[]');
   inputName.setAttribute('type', 'hidden');
   inputName.setAttribute('value', idStudent);
-
 
   // Agregar la etiqueta al contenedor de la fila
   otherCol.appendChild(nombreLabel);
@@ -91,17 +90,17 @@ export function addStudentRow(idStudent, imgName, studentName, htmlElem, idGroup
   radioButtonsRow.appendChild(radioCol);
   // Crear el primer radio button
   let radio1 = crearRadioButton('Presente', 'P', 'success');
-  radio1.setAttribute('name', 'estate');
+  radio1.setAttribute('name', 'estates[]');
   radioCol.appendChild(radio1);
 
   // Crear el segundo radio button
   let radio2 = crearRadioButton('Retardo', 'R', 'warning');
-  radio1.setAttribute('name', 'estate');
+  radio1.setAttribute('name', 'estates[]');
   radioCol.appendChild(radio2);
 
   // Crear el tercer radio button
   let radio3 = crearRadioButton('Ausente', 'A', 'danger');
-  radio1.setAttribute('name', 'estate');
+  radio1.setAttribute('name', 'estates[]');
   radioCol.appendChild(radio3);
 
   // Agregar la fila de radio buttons al contenedor de la columna 9

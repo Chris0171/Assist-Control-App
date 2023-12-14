@@ -10,13 +10,11 @@ $password = $_POST['value1'];
 $email = $_POST['value2'];
 
 
-$password = md5($password);
-
-$res = $conn->query("SELECT contrasena FROM Usuario WHERE email = '$email';");
+$res = $conn->query("SELECT contraseña FROM Usuario WHERE email = '$email';");
 
 if ($res->num_rows > 0) {
   $row = mysqli_fetch_assoc($res);
-  if ($password === $row['contrasena']) {
+  if (password_verify($password, $row['contraseña'])) {
     $data = array(
       "passOk" => true
     );
@@ -29,7 +27,10 @@ if ($res->num_rows > 0) {
   }
   
 } else {
-  echo json_encode(array('mensaje' => 'No se encontraron datos'));
+  $data = array(
+    "passOk" => false
+  );
+  echo json_encode($data);
 }
 
 $conn->close();

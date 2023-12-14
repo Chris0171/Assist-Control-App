@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reporte de Error</title>
+  <title>Justificar Ausencia</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -29,23 +29,26 @@
     <?php
     $logoPath = "Images/Logo.png";
     include("Includes/Header.inc.php");
+    
+    $idAsistencia = $_GET['idAsistencia'];
     ?>
 
     <div class="row justify-content-center align-items-center g-0">
       <div class="col-12 col-sm-10 col-md-8 col-xl-6 col-xxl-5 mt-4 position-absolute top-50 start-50 translate-middle">
         <div class="text-white stForm">
-          <p class="display-5 text-center subtitle">REPORTAR</p>
-          <form action="Actions/ReportError.act.php" method="post">
+          <p class="display-5 text-center subtitle">JUSTIFICAR FALTA</p>
+          <form action="Actions/JustifyAbsence.act.php" method="post">
             <div class="form-group mb-3">
-              <label for="textAreaD" class="form-label">Descripción del error: </label>
-              <textarea placeholder="Explicanos el error que encontraste..." class="form-control" id="textAreaD" rows="2"></textarea>
+              <label for="textAreaD" class="form-label">Observaciones</label>
+              <textarea placeholder="Explicanos el error que encontraste..." class="form-control" id="textAreaD"
+                rows="3"></textarea>
             </div>
             <div class="form-group mb-3">
-              <label for="formFile" class="form-label">Subir una captura del error: </label>
-              <input class="form-control" type="file" id="formFile" accept="image/*">
+              <label for="formFile" class="form-label">Adjuntar justificante...</label>
+              <input class="form-control" type="file" id="formFile">
             </div>
             <div class="text-center parr fw-bold">
-              <button type="submit" class="btn mt-4 mb-3 text-white stBtn">Enviar reporte</button>
+              <button type="submit" class="btn mt-4 mb-3 text-white stBtn">Justificar</button>
             </div>
           </form>
         </div>

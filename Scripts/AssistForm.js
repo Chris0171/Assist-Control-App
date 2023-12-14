@@ -67,7 +67,7 @@ function createStudentInstance(data, htmlElem) {
     addGroupName(nameGroupSelect, htmlElem, selectGroups.value);
 
     for (let i = 0; i < data.length; i++) {
-      addStudentRow(data[i][0], 'ChristianMilanes.jpg', data[i][1] + " " + data[i][2], htmlElem, selectGroups.value);
+      addStudentRow(data[i][0], data[i][4], data[i][1] + " " + data[i][2], htmlElem, selectGroups.value);
     }
     idGroup = selectGroups.value;
   }, 500);

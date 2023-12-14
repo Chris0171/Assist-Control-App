@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio De Sesión</title>
+  <title>Más información</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -46,9 +46,9 @@
     $logoPath = "Images/Logo.png";
     include("Includes/Header.inc.php");
 
-    $sql = "SELECT Modulo.nombreModulo, Profesor.nombreProfesor, Profesor.apellidosProfesor, Asistencia.estado, Asistencia.fechaHora, 
-    Profesor.apellidosProfesor, Asistencia.idAsistencia FROM Asistencia, Profesor, Modulo WHERE 
-    Asistencia.idAlumno = '$idStudent' AND Profesor.idProfesor = Asistencia.idProfesor AND
+    $sql = "SELECT Modulo.nombreModulo, Profesor.nombreProfesor, Profesor.apellidosProfesor, Asistencia.estado, 
+    Asistencia.fechaHora, Profesor.apellidosProfesor, Asistencia.idAsistencia FROM Asistencia, Profesor,
+    Modulo WHERE Asistencia.idAlumno = '$idStudent' AND Profesor.idProfesor = Asistencia.idProfesor AND
     Modulo.idModulo = Asistencia.idModulo";
 
     $res = $conn->query($sql);
@@ -94,7 +94,8 @@
                   <td class="bg-transparent text-white thSt">
                     <?php echo $reg[4]; ?>
                   </td>
-                  <td class="bg-transparent text-white thSt"><a class="btn btn-warning" href=""><i
+                  <td class="bg-transparent text-white thSt"><a class="btn btn-warning" 
+                  href="JustifyAbsence.php?idAsistencia=<?php echo $reg[6] ?>"><i
                         class="bi bi-pen text-white"> Justificar</i></a></td>
                 </tr>
                 <?php

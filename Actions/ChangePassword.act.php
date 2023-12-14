@@ -6,7 +6,7 @@ include("../Includes/Connection.inc.php");
 $conn = new DatabaseConnection("localhost", "root", "Lelouch01", "controlAsistencia");
 $conn->connect();
 
-$email = $_POST['email'];
+$newPassword = $_POST['newPassword'];
 
 $res = $conn->query("SELECT idUsuario, rol FROM Usuario  WHERE email = '$email';");
 
@@ -29,5 +29,7 @@ if ($res->num_rows > 0) {
   }
   exit();
 }
+
+
 
 ?>
